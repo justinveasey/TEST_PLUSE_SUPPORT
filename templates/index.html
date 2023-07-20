@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>pulsesupport.com</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Poppins", sans-serif
+    }
+
+    body {
+      font-size: 16px;
+    }
+
+    .w3-half img {
+      margin-bottom: -6px;
+      margin-top: 16px;
+      opacity: 0.8;
+      cursor: pointer
+    }
+
+    .w3-half img:hover {
+      opacity: 1
+    }
+
+    /* Updated Styles */
+    nav.w3-sidebar {
+      background-color: teal;
+    }
+
+    header.w3-container {
+      background-color: teal;
+    }
+
+    hr.w3-border-red {
+      border-color: gray;
+    }
+
+    h1.w3-text-red,
+    h1.w3-text-gray {
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding"
+    style="z-index:3;width:300px;font-weight:bold;background-color: teal;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+      style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+      <h3 class="w3-padding-64"><b>Innovative<br>Technology</b></h3>
+    </div>
+    <div class="w3-bar-block">
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+      <a href="services.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a>
+      <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+      <a href="signup.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-margin-right" onclick="w3_open()">☰</a>
+    <span>Innovative Technology</span>
+  </header>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:80px" id="showcase">
+      <h1 class="w3-jumbo"><b>Pulse Support</b></h1>
+      <h1 class="w3-xxxlarge w3-text-gray"><b>Medical Tech</b></h1>
+      <hr style="width:50px;border:5px solid gray" class="w3-round">
+      <p> My product, Pulse Support, is a revolutionary device designed to provide immediate assistance in emergency
+        situations. The concept behind Pulse Support is simple yet groundbreaking. By placing the device on a person, it
+        utilizes advanced scanning technology to quickly and accurately assess their body for any injuries or medical
+        conditions. The device performs a comprehensive body scan, capturing vital information about the person's health
+        status.</p>
+
+      <p>Once the scan is complete, the gathered information is instantly transmitted to first responders, medical
+        professionals, and hospitals. This real-time data transmission enables immediate awareness and informed
+        decision-making for the individuals involved in the person's care. Whether it's a paramedic on the scene or a
+        doctor at a hospital, they will have access to crucial details about the person's injuries or medical
+        conditions, allowing them to provide timely and effective treatment.</p>
+    </div>
+
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+
+            </form>
+          </div>
+
+          <!-- End page content -->
+      </div>

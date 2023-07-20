@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>pulsesupport.com</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+
+/* Updated Styles */
+nav.w3-sidebar {
+  background-color: teal;
+}
+
+header.w3-container {
+  background-color: teal;
+}
+
+hr.w3-border-red {
+  border-color: gray;
+}
+
+h1.w3-text-red, h1.w3-text-gray {
+  color: gray;
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;background-color: teal;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Innovative<br>Technology</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+    <a href="#signup" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Sign Up</a>
+  </div>
+</nav>
+{% if users|length < 1 %}
+   <h4>There are no users signed up.</h4>
+   {% else %}
+   {% for user in users %}
+   <table>
+      <tr>
+         <th>Username</th>
+         <th>Password</th>
+      </tr>
+      <tr>
+         <th>{{ user['name'] }}</th>
+         <th>{{ user['password'] }}</th>
+      </tr>
+   </table>
+   {% endfor %}
+   {% endif %}
+</body>
+</html>
